@@ -10,7 +10,7 @@ from fastapi.responses import StreamingResponse
 import uvicorn
 
 # cv2 모듈 import
-from Camera import get_stream_video
+from preprocess import video_streaming, get_stream_video
 
 # FastAPI객체 생성
 app = FastAPI()
