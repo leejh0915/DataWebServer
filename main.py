@@ -1,23 +1,12 @@
-import cv2
-
-# main.py
-
-# 라이브러리 import
 # StreamingResponse를 가져와야함
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 
 import uvicorn
+from webdata import get_stream
 
-# cv2 모듈 import
-from preprocess import get_stream
-
-# FastAPI객체 생성
+# FastAPI 인스턴스 생성
 app = FastAPI()
-
-# openCV에서 이미지 불러오는 함수
-# def video_streaming():
-#     return get_stream()
 
 # 스트리밍 경로를 /video 경로로 설정.
 @app.get("/video")
